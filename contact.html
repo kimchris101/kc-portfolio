@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <!-- Navigation Header -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">&lt;DevPortfolio /&gt;</a>
@@ -31,22 +32,22 @@
       <div class="row justify-content-center">
         <div class="col-md-8">
           <h1 class="display-5 fw-bold mb-3">Let's <span class="text-magenta">Connect</span></h1>
-          <p class="text-muted mb-4">Have a project in mind or want to collaborate? Send a message below.</p>
+          <p class="mb-4">Have a project in mind or want to collaborate? Send a message below.</p>
 
           <form id="contactForm" class="card card-dark p-4">
             <div class="mb-3">
-              <label for="name" class="form-label text-main">Name</label>
-              <input type="text" class="form-control bg-dark text-white border-secondary" id="name" required>
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your name" required>
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label text-main">Email</label>
-              <input type="email" class="form-control bg-dark text-white border-secondary" id="email" required>
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
             </div>
             <div class="mb-3">
-              <label for="message" class="form-label text-main">Message</label>
-              <textarea class="form-control bg-dark text-white border-secondary" id="message" rows="5" required></textarea>
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="How can I help you?" required></textarea>
             </div>
-            <button type="submit" class="btn btn-cyan w-100 py-2">Send Message</button>
+            <button type="submit" class="btn btn-cyan w-100 py-2 mt-2">Send Message</button>
             <div id="formAlert" class="mt-3 alert d-none" role="alert"></div>
           </form>
         </div>
@@ -54,9 +55,10 @@
     </div>
   </main>
 
-  <footer class="py-4 text-center text-muted">
+  <!-- Footer -->
+  <footer class="py-4 text-center">
     <div class="container">
-      <p class="mb-0">&copy; 2026 Portfolio. Built with Bootstrap, HTML & JS.</p>
+      <p class="mb-0 text-muted">&copy; 2026 Portfolio. Built with Bootstrap, HTML &amp; JS.</p>
     </div>
   </footer>
 
