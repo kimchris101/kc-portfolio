@@ -180,3 +180,26 @@ footer {
 .form-control::placeholder {
   color: #8b949e !important;
 }
+/* --- About Page Specific Styles --- */
+.about-avatar-wrapper {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  padding: 8px;
+  display: inline-block;
+  box-shadow: 0 0 15px var(--accent-magenta-glow); /* Slight magenta glow matching your avatar logo */
+}
+
+.about-avatar {
+  background-color: var(--bg-card); /* Add dark card color as an underlay in case of transparency issues */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  /* The shadow class in Bootstrap handles the soft shadow */
+}
+
+/* Ensure the text blocks have good line height for the long blurb */
+.space-y-3 p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
