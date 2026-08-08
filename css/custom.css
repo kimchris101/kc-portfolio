@@ -146,3 +146,37 @@ footer {
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
 }
+
+/* --- Contact Page High-Contrast Fixes --- */
+
+/* Fix section paragraph text */
+.max-w-800 p {
+  color: #c9d1d9 !important; /* Crisp light gray */
+}
+
+/* Fix form labels (Name, Email, Message) */
+.form-label {
+  color: #f0f6fc !important; /* Bright white for high visibility */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Fix form input fields & text contrast */
+.form-control {
+  background-color: #0d1117 !important; /* Dark GitHub background */
+  color: #f0f6fc !important;            /* Bright white typed text */
+  border: 1px solid #30363d !important;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  background-color: #010409 !important;
+  color: #ffffff !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 0 0.25rem var(--accent-cyan-glow) !important;
+}
+
+/* Fix placeholder text contrast */
+.form-control::placeholder {
+  color: #8b949e !important;
+}
