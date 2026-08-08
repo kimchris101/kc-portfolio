@@ -1,96 +1,148 @@
-/* GitHub Dark Palette Theme Variables */
+/* Dark Theme Palette - High Contrast Edition */
 :root {
   --bg-dark: #0d1117;
   --bg-card: #161b22;
-  --bg-card-hover: #21262d;
+  --bg-card-hover: #1c2128;
   --border-color: #30363d;
-  --text-main: #c9d1d9;
-  --text-muted: #8b949e;
+  --border-highlight: #444c56;
+  
+  /* High contrast typography colors */
+  --text-main: #f0f6fc;      /* Pure bright white for maximum legibility */
+  --text-muted: #a3b1c2;     /* Bright slate gray (contrast compliant) */
+  
+  /* Vibrant neon accents */
   --accent-cyan: #58a6ff;
+  --accent-cyan-glow: rgba(88, 166, 255, 0.25);
   --accent-magenta: #d2a8ff;
-  --accent-pink: #f778ba;
+  --accent-magenta-glow: rgba(210, 168, 255, 0.25);
 }
 
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
 
-main {
-  flex: 1;
-}
+main { flex: 1; }
 
-/* Navbar & Header */
+/* Navbar */
 .navbar {
-  background-color: rgba(13, 17, 23, 0.9);
-  backdrop-filter: blur(10px);
+  background-color: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-brand {
   color: var(--accent-cyan) !important;
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .nav-link {
-  color: var(--text-main) !important;
+  color: var(--text-muted) !important;
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--accent-magenta) !important;
+  color: var(--text-main) !important;
 }
 
-/* Accent Typography & Buttons */
-.text-cyan { color: var(--accent-cyan); }
-.text-magenta { color: var(--accent-magenta); }
+/* High Contrast Accent Classes */
+.text-cyan { color: var(--accent-cyan) !important; }
+.text-magenta { color: var(--accent-magenta) !important; }
+.text-muted { color: var(--text-muted) !important; }
 
+/* Buttons */
 .btn-cyan {
   background-color: transparent;
   color: var(--accent-cyan);
   border: 1px solid var(--accent-cyan);
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 .btn-cyan:hover {
   background-color: var(--accent-cyan);
-  color: var(--bg-dark);
-  box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent-cyan-glow);
 }
 
 .btn-magenta {
   background-color: transparent;
   color: var(--accent-magenta);
   border: 1px solid var(--accent-magenta);
-  transition: all 0.3s ease;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 .btn-magenta:hover {
   background-color: var(--accent-magenta);
-  color: var(--bg-dark);
-  box-shadow: 0 0 15px rgba(210, 168, 255, 0.4);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent-magenta-glow);
 }
 
-/* Cards */
+/* Cards & Image Highlights */
 .card-dark {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card-dark:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-cyan);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  border-color: var(--border-highlight);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Photo Snippet Wrapper */
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #010409;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.card-dark:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* High Contrast Form Controls (Contact Page) */
+.form-control {
+  background-color: #010409 !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.form-control:focus {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 0 0.25rem var(--accent-cyan-glow) !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.8;
 }
 
 /* Footer */
 footer {
   background-color: var(--bg-card);
   border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
 }
