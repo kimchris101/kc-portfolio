@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">&lt;DevPortfolio /&gt;</a>
+      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="work.html">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="py-5 my-5">
+      <div class="container text-center py-4">
+        <h1 class="display-3 fw-bold mb-3">
+          Building Digital Experiences with <span class="text-cyan">Code</span> & <span class="text-magenta">Precision</span>
+        </h1>
+        <p class="lead text-muted max-w-600 mx-auto mb-4">
+          Frontend developer specializing in JavaScript, React, and modern CSS architecture.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="work.html" class="btn btn-cyan px-4 py-2">View My Work</a>
+          <a href="contact.html" class="btn btn-magenta px-4 py-2">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preview Projects Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="h3 fw-bold">Featured Projects</h2>
+          <a href="work.html" class="text-cyan text-decoration-none">See All <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Preview Card 1 -->
+          <div class="col-md-6">
+            <div class="card card-dark h-100 p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="h5 text-cyan mb-0">KC Fiction Portfolio</h3>
+                <span class="badge bg-dark border border-secondary">Live</span>
+              </div>
+              <p class="text-muted small">A curated interactive showcase of literature and creative portfolio projects.</p>
+              <div class="mt-auto">
+                <a href="https://kcfictionportfolio.netlify.app/" target="_blank" class="btn btn-sm btn-cyan">Visit Project <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preview Card 2 -->
+          <div class="col-md-6">
+            <div class="card card-dark h-100 p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="h5 text-magenta mb-0">Lexicon Dictionary App</h3>
+                <span class="badge bg-dark border border-secondary">React</span>
+              </div>
+              <p class="text-muted small">Fast dictionary search application with dynamic definition fetching and audio pronunciation.</p>
+              <div class="mt-auto">
+                <a href="https://lexicondictionaryreact.netlify.app/" target="_blank" class="btn btn-sm btn-magenta">Visit Project <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-muted">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Portfolio. Built with Bootstrap, HTML & JS.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
